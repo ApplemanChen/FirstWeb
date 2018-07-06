@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block mainbody %}
+<!-- Two -->
+<section id="two" class="wrapper style2 alt">
+    <div class="inner">
+        {% for blog in all_blog %}
+        <div class="spotlight">
+            <div class="image">
+                <img src="/static/images/pic02.jpg" alt="" />
+            </div>
+            <div class="content">
+                <h3>{{blog.title}}</h3>
+                <p>{{blog.content}}</p>
+                <p>{{blog.create_time}}</p>
+                <p>分类数目：{{blog.category.number}}</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">查看详情</a></li>
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+        <ul class="actions special">
+            <li><a href="#" class="button alt">Ipsum magna tempus</a></li>
+            <li><a href="#" class="button alt">Ipsum magna tempus</a></li>
+            <li><a href="#" class="button alt">Ipsum magna tempus</a></li>
+        </ul>
+    </div>
+</section>
+<!-- 练习分组筛选（无用） -->
+<!-- <section class="wrapper style1 alt">
+	<div class="inner">
+	    <ul class="actions special">
+	        {% regroup cities by country as country_list %} {% for country in country_list %}
+	        <li>{{ country.grouper }}
+	            <ul class="checklist">
+	                {% for city in country.list %}
+	                <li>{{ city.name }}: {{ city.population }}</li>
+	                {% endfor %}
+	            </ul>
+	        </li>
+	        {% endfor %}
+	    </ul>
+	</div>
+</section> -->
+{% endblock %}

@@ -5,7 +5,7 @@ from django.utils import timezone
 class Category(models.Model):
 	"""文章分类"""
 	name = models.CharField(verbose_name='文章类别',max_length=20)
-
+	number = models.IntegerField(verbose_name="分类数目",default=1)
 	class Meta:
 		verbose_name = '文章类别'
 		verbose_name_plural = verbose_name
@@ -17,7 +17,7 @@ class Category(models.Model):
 class Tag(models.Model):
 	"""文章标签"""
 	name = models.CharField(verbose_name="文章标签",max_length=20)
-
+	number = models.IntegerField(verbose_name = "标签数目",default=1)
 	class Meta:
 		verbose_name = "文章标签"
 		verbose_name_plural = verbose_name
