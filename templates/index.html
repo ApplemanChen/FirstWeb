@@ -1,61 +1,57 @@
-
-{% extends 'base.html' %}
-
-{% block mainbody %}
-<!-- One -->
+ {% extends 'base.html' %} {% block mainbody %}
+<!-- Preview -->
 <section id="one" class="wrapper">
-	<div class="inner split">
-		<section>
-			<h2>Magna feugiat adipiscing</h2>
-			<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus aliquam et tempus lorem feugiat adipiscing lorem. Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis orci. Pellentesque eget consequat.</p>
-			<ul class="actions">
-				<li><a href="#" class="button alt">Learn more</a></li>
-			</ul>
-		</section>
-		<section>
-			<ul class="checklist">
-				<li>Ipsum nisl sed cursus magna</li>
-				<li>Amet veroeros sed aliquam consequat</li>
-				<li>Tempus lorem adipiscing et lorem</li>
-				<li>Morbi pharetra vitae felis placerat</li>
-				<li>Pharetra nulla risus orci dapibus</li>
-			</ul>
-		</section>
-	</div>
+    <div class="inner split">
+        <section>
+            <h2>Site Preview</h2>
+            <p>This website is my world for sharing with all of you. Welcome,the site is personal,not bussiness.</p>
+        </section>
+        <section>
+            <ul class="contact">
+                <li><a href="{% url 'blog' %}" class="button alt">Go to blogs</a></li>
+                <li><a href="{% url 'comments' %}" class="button alt">Go to comments</a></li>
+            </ul>
+        </section>
+    </div>
 </section>
-
+<!-- 分割线 -->
+<div class="spotlight">
+</div>
+<!-- Contact -->
 <section id="contact" class="wrapper">
-	<div class="inner split">
-		<section>
-			<h2>Orci malesuada</h2>
-			<p>Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis pellentesque eget.</p>
-			<form action="#" class="alt" method="POST">
-				<div class="row uniform">
-					<div class="6u 12u$(xsmall)">
-						<input name="name" placeholder="Name" type="text">
-					</div>
-					<div class="6u$ 12u$(xsmall)">
-						<input name="email" placeholder="Email" type="email">
-					</div>
-					<div class="12u$">
-						<textarea name="message" placeholder="Message" rows="4"></textarea>
-					</div>
-				</div>
-				<ul class="actions">
-					<li><input class="alt" value="Send message" type="submit"></li>
-				</ul>
-			</form>
-		</section>
-		<section>
-			<ul class="contact">
-				<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-				<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
-				<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-				<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
-				<li class="fa-home">1234 Somewhere Road Suite 9823<br/>Nashville, TN 00000-0000</li>
-			</ul>
-		</section>
-	</div>
+    <div class="inner split">
+        <section>
+            <h2>Communication</h2>
+            <p>If you have any suggestions for this site or for me,just send the message. I'll be see it and improve this site.</p>
+            <form action="#" class="alt" method="POST">
+                <div class="row uniform">
+                    <div class="6u 12u$(xsmall)">
+                        <input name="name" placeholder="Your Name" type="text">
+                    </div>
+                    <div class="6u$ 12u$(xsmall)">
+                        <input name="email" placeholder="Your Email" type="email">
+                    </div>
+                    <div class="12u$">
+                        <textarea name="message" placeholder="Message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li>
+                        <input class="alt" value="Send message" type="submit">
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <section>
+            <ul class="contact">
+                <li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+                <li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
+                <li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+                <li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
+                <li class="fa-home">1234 Somewhere Road Suite 9823
+                    <br/>Nashville, TN 00000-0000</li>
+            </ul>
+        </section>
+    </div>
 </section>
 {% endblock %}
-<!-- Contact -->

@@ -24,4 +24,10 @@ class BlogView(View):
 		]
 
 		return render(request,'blog.html',{'all_blog':all_blog,'cities':cities})
+
+
+class CommentView(View):
+	"""Comment"""
+	def get(self,request):
+		return render(request,'comments.html',{})
 		
